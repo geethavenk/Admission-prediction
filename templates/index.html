@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">Predict your chances of admission to Grad School</h1>
+
+    <div class="form">
+        <form action="/show_prediction" method="POST">
+            <div>
+                <input type="number" name="gre_score" id="gre_score" placeholder="GRE Score">
+            </div>
+
+            <div>
+                <input type="number" name="toefl_score" id="toefl_score" placeholder="TOEFL Score">
+            </div>
+
+            <div>
+                <input type="number" name="university_rating" id="university_rating" placeholder="University Rating">
+            </div>
+
+            <div>
+                <input type="number" name="sop" id="sop" placeholder="SOP Score">
+            </div>
+
+            <div>
+                <input type="number" name="lor" id="lor" placeholder="LOR Score">
+            </div>
+
+            <div>
+                <input type="number" name="cgpa" id="cgpa"placeholder="CGPA" step="any">
+            </div>
+
+            <div>
+                <label for="research">Do you have research experience?</label>
+                <select name="research" id="research">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</div>
+{% endblock %}
