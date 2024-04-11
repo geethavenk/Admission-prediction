@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+      <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <style>
+      body {
+        text-align: center;
+        font-size: 16px;
+      }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="table-users">
+   <div class="header"></div>
+
+      <p style="font-size: 1.5em;">Your chance for admission is <strong>{{prediction}} percent</p>
+</div>
+
+</body>
+
+</html>
